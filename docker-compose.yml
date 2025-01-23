@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: admin # Change this to your desired username
+      POSTGRES_PASSWORD: admin123 # Change this to your desired password
+      POSTGRES_DB: postgres # Change this to your desired database name
+    ports:
+      - "5432:5432" # Change this to your desired port local:container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "8080:80" # Change this to your desired port local:container
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ~/DatosBD/:/var/lib/pgadmin/storage/admin_admin.com # ~/DatosBD/ is the path to the backup directory for windows see the documentation 
+      - ./servers.json:/pgadmin4/servers.json
+
+volumes:
+  postgres_data:
+  pgadmin_data:
