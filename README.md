@@ -1,6 +1,4 @@
-# DOCKER POSTGRESQL + PGADMIN
-
-### Docker - PostgreSQL y pgAdmin
+# DOCKER COMPOSE POSTGRESQL + PGADMIN
 
 Este proyecto proporciona una implementación sencilla para uso personal utilizando **Docker** para crear un entorno con **PostgreSQL** y **pgAdmin** listo para usar en menos de 3 minutos. Es ideal para practicar y tener un entorno aislado para gestionar bases de datos.
 
@@ -22,8 +20,8 @@ Este proyecto utiliza **Docker Compose** para orquestar dos servicios:
 Primero, clona este repositorio en tu máquina:
 
 ```bash
-git clone -> Pendiente añadir link del repo tras crear
-cd tu-repositorio
+git clone https://github.com/zer0-sh/DBPostgresDocker
+cd DBPostgresDocker
 ```
 
 ### 2. Edita la configuración según sea necesario
