@@ -63,10 +63,7 @@ volumes:
 
 ```
 
-"""
-This function connects to a database and retrieves data based on the provided query.
-
-#### Note:
+#### Nota:
 - En Linux, el directorio puede ser `~/DatosBD` para `/home/PepitoPerez/DatosBD`.
 - En Windows, el directorio es `/mnt/c/Users/PepitoPerez/Documents/` para `C:\Users\PepitoPerez\Documents`.
 
